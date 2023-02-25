@@ -2,7 +2,7 @@
 
 ### How to use this repo
 
-git clone https://github.com/morethancertified/mtc-terraform.git
+git clone https://github.com/raysylverne/mtc-terraform-docker.git
 
 Each directory is named after the Terraform feature being used. 
 
