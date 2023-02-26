@@ -1,4 +1,4 @@
-# Terraform Fundementals & HashiCorp Exam Prep
+# Follow me on my journey as I learn Terraform Fundementals & prep for HashiCorp Exam Prep
 
 ### How to use this repo
 
