@@ -9,3 +9,8 @@ resource "local_file" "key_details" {
   filename = var.filename
   content  = tls_private_key.pvtkey.private_key_pem
 }
+
+/*Which argument should be used to explicitly set dependencies for a resource?
+depends_on = [
+  <argument.goes.here>
+]*/
