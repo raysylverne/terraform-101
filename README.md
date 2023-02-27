@@ -1,8 +1,8 @@
-# Follow me on my journey as I learn Terraform Fundementals & prep for HashiCorp Exam Prep
+# Terraform Fundementals & Prep for HashiCorp Exam Prep
 
 ### How to use this repo
 
-git clone https://github.com/raysylverne/mtc-terraform-docker.git
+git clone https://github.com/raysylverne/terraform-101.git
 
 Each directory is named after the Terraform feature being used. 
 
