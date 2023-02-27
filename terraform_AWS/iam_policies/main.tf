@@ -23,7 +23,8 @@ resource "aws_iam_policy" "adminUser" {
   #policy = file("admin-policy.json")
 }
 
-# attaches policy you just created to user passing dependencies as argument variables for user and policy
+# attaches policy you just created to user 
+# by passing a reference expression as arguments for user and policy arn
 resource "aws_iam_user_policy_attachment" "IaC_AdminUser_Access" {
   user       = aws_iam_user.admin-user.name
   policy_arn = aws_iam_policy.adminUser.arn
