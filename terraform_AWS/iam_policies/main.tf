@@ -6,10 +6,21 @@ resource "aws_iam_user" "admin-user" {
   }
 }
 
-# Create aws admin policy. Pass JSON policy using file func 
+# Create aws admin policy. Pass JSON policy using file func as an argument OR
+# Or you can add hardcode json policy right into the config file like below
 resource "aws_iam_policy" "adminUser" {
   name   = "AdminUsers"
-  policy = file("admin-policy.json")
+  policy = jsonencode({
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "*",
+            "Resource": "*"
+        }
+    ]
+  })
+  #policy = file("admin-policy.json")
 }
 
 # attaches policy you just created to user passing dependencies as argument variables for user and policy
