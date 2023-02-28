@@ -2,10 +2,6 @@
 module "jenkins_role" {
   source = "terraform-aws-modules/iam/aws//modules/iam-assumable-role"
 
-  name_prefix = "jenkins"
-  policy_arns = ["arn:aws:iam::aws:policy/AmazonS3FullAccess"]
-  description = "IAM role for Jenkins Server"
-
   tags = {
     Terraform   = "true"
     Environment = "jenkins"

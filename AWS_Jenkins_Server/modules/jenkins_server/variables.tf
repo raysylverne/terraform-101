@@ -13,7 +13,7 @@ variable "ami" {
 variable "ec2_tags" {
   description = "Tags to apply to the EC2 instance"
   type        = map(string)
-  default     = {
+  default = {
     Terraform   = "true"
     Environment = "jenkins"
     Name        = "jenkins-server"
@@ -37,12 +37,6 @@ variable "user_data" {
               EOF
 }
 
-variable "ingress_cidr_blocks" {
-  description = "CIDR blocks to allow ingress traffic"
-  type        = list(string)
-  default     = ["${var.my_ip}/32"]
-}
-
 variable "from_port" {
   description = "From port for ingress traffic"
   type        = number
@@ -59,4 +53,3 @@ variable "my_ip" {
   description = "Your public IP address"
   type        = string
 }
-
